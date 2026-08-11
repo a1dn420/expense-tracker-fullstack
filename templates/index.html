@@ -1,0 +1,98 @@
+<!-- Tells the browser to read this page using the latest modern HTML5 standards -->
+<!DOCTYPE html>
+
+<!-- Starts the HTML document and specifies that the text content is in English -->
+<html lang="en">
+
+<!-- Opens the head section, which holds behind-the-scenes settings and external file connections -->
+<head>
+    <!-- Sets the text encoding to UTF-8 so letters, numbers, and currency signs (£) display perfectly -->
+    <meta charset="UTF-8">
+    
+    <!-- Makes the webpage mobile-friendly by scaling it automatically for phone and tablet screens -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Defines the title text that appears on your internet browser tab -->
+    <title>Personal Expense Tracker</title>
+    
+    <!-- Connects the design file (CSS) located inside the static folder to style your app's looks -->
+    <link rel="stylesheet" href="/static/style.css">
+
+<!-- Closes the behind-the-scenes settings section -->
+</head>
+
+<!-- Opens the body section, which holds everything users can actually see and interact with on screen -->
+<body>
+    <!-- Creates an invisible structural box (container) to group and center all your app content -->
+    <div class="container">
+        <!-- Displays the main, large heading title at the top of the page -->
+        <h1>Expense Tracker</h1>
+        
+        <!-- Opens a smaller box to hold the input boxes and buttons neatly together -->
+        <div class="form-container">
+            <!-- Creates a text entry box for typing the name of what you bought -->
+            <input type="text" id="description" placeholder="What did you buy?">
+            
+            <!-- Creates a number-only entry box for typing how much the item cost -->
+            <input type="number" id="amount" placeholder="Amount (£)">
+            
+            <!-- Opens a clickable dropdown choice menu for sorting your purchase -->
+            <select id="category">
+                <!-- Adds 'Food' as a selectable choice inside the dropdown menu -->
+                <option value="Food">Food</option>
+                <!-- Adds 'Transport' as a selectable choice inside the dropdown menu -->
+                <option value="Transport">Transport</option>
+                <!-- Adds 'Bills' as a selectable choice inside the dropdown menu -->
+                <option value="Bills">Bills</option>
+                <!-- Adds 'Entertainment' as a selectable choice inside the dropdown menu -->
+                <option value="Entertainment">Entertainment</option>
+            <!-- Closes the dropdown choice menu -->
+            </select>
+            
+            <!-- Creates a clickable action button used to submit your expense data -->
+            <button id="add-btn">Add Expense</button>
+            
+            <!-- Creates a secondary button used to wipe the saved data out and start fresh -->
+            <button id="reset-btn" class="reset-btn">Reset Database</button>
+        <!-- Closes the input box container -->
+        </div>
+
+        <!-- Opens a designated box layout for tracking and displaying your running costs -->
+        <div class="total-container">
+            <!-- Displays a medium heading text for your total, isolating '0.00' so JavaScript can change it -->
+            <h3>Total Spent: £<span id="total-amount">0.00</span></h3>
+        <!-- Closes the total tracker layout box -->
+        </div>
+
+        <!-- Starts a spreadsheet-style data table to map out your list of expenses -->
+        <table>
+            <!-- Opens the top header row block of your data table -->
+            <thead>
+                <!-- Creates a single horizontal row inside the table header -->
+                <tr>
+                    <!-- Creates a bold column title label for item names -->
+                    <th>Description</th>
+                    <!-- Creates a bold column title label for categories -->
+                    <th>Category</th>
+                    <!-- Creates a bold column title label for prices -->
+                    <th>Amount</th>
+                    <!-- Creates a bold column title label for buttons like 'Delete' -->
+                    <th>Action</th>
+                <!-- Closes the horizontal table header row -->
+                </tr>
+            <!-- Closes the top header row block of the table -->
+            </thead>
+            
+            <!-- Opens the table body where JavaScript will dynamically build and inject rows as you type -->
+            <tbody id="expense-list"></tbody>
+        <!-- Closes the data table -->
+        </table>
+    <!-- Closes the main structural container box -->
+    </div>
+
+    <!-- Links your JavaScript logic file from the static folder to give your buttons real functionality -->
+    <script src="/static/script.js"></script>
+<!-- Closes the visible section of the webpage -->
+</body>
+<!-- Marks the absolute end of the HTML code document -->
+</html>

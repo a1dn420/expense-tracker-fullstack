@@ -1,0 +1,160 @@
+/* Applies styling rules to the entire browser window backdrop surface */
+body {
+    /* Sets the clean text style font family across the whole page, removing clunky serifs */
+    font-family: Arial, sans-serif;
+    /* Paints the background canvas area a soft, light grey-blue tint to reduce eye strain */
+    background-color: #f4f7f6;
+    /* Pushes all interior page contents inward by 40 pixels from the outer edge of the window */
+    margin: 40px;
+}
+
+/* Formats the main central white card wrapper holding your entire expense tracking application */
+.container {
+    /* Prevents the white application card from expanding wider than 600 pixels across your screen */
+    max-width: 600px;
+    /* Colors the base material surface layer of the main central panel solid bright white */
+    background: white;
+    /* Inserts a 20-pixel cushion buffer spacing inside the container card boundaries */
+    padding: 20px;
+    /* Smooths out the four hard outer edges of your layout frame into elegant rounded corners */
+    border-radius: 8px;
+    /* Projects a soft, transparent shadow underneath the dashboard card to make it pop outwards */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    /* Automatically centers the entire application card perfectly in the middle of your screen layout */
+    margin: 0 auto;
+}
+
+/* Modifies the appearance of your principal headline title text */
+h1 {
+    /* Centers the primary title heading text alignment horizontally on the page dashboard canvas */
+    text-align: center;
+    /* Darkens the main text color string to a soft Charcoal Black hue rather than stark black */
+    color: #333;
+}
+
+/* Arranges the layout grid configuration for your item fields and submission actions */
+.form-container {
+    /* Activates a flexible box layout grid alignment engine for easy item spacing controls */
+    display: flex;
+    /* Permits components to safely wrap down onto new horizontal tracks instead of squeezing thin */
+    flex-wrap: wrap; /* This prevents elements from stretching awkwardly sideways */
+    /* Distributes an equal 10-pixel gap cushion separator block among neighboring form elements */
+    gap: 10px;
+    /* Pushes the underlying tracking data table downwards by maintaining a 20-pixel clear zone */
+    margin-bottom: 20px;
+}
+
+/* Standards rule formatting applied simultaneously to your entry fields, menus, and actions */
+input, select, button {
+    /* Fills the inside track zones with a 10-pixel sizing perimeter area for larger typing targets */
+    padding: 10px;
+    /* Traces a subtle light grey perimeter frame boundary wrapper line around each interactive block */
+    border: 1px solid #ccc;
+    /* Curves the sharp box perimeter joints into slightly softened corner framework layouts */
+    border-radius: 4px;
+}
+
+/* Targets the descriptive text entry input box to dictate its layout footprint proportion */
+input[type="text"] { 
+    /* Instructs the item name entry element to absorb twice as much remaining line width layout space */
+    flex: 2; 
+}
+
+/* Targets the numeric cash tracking input entry line to dictate its scaling proportion */
+input[type="number"] { 
+    /* Instructs the currency cost element to take up one portion of standard relative row scaling */
+    flex: 1; 
+}
+
+/* Styles the core interactive operational submission element button defaults */
+button {
+    /* Coats the primary click element background surface face plates in a vibrant forest green hue */
+    background-color: #28a745;
+    /* Colors the readable indicator typography text inside the submission trigger block pure white */
+    color: white;
+    /* Changes the system screen cursor arrow into a pointing hand indicator icon on alignment mouseovers */
+    cursor: pointer;
+    /* Shaves off default native computer browser outline borders for uniform modern rendering profiles */
+    border: none;
+}
+
+/* Alters the interface style properties dynamically when users align hover points over buttons */
+button:hover { 
+    /* Shifts the solid button coat into a deeper emerald green tone to indicate a clickable area */
+    background-color: #218838; 
+}
+
+/* Adjusts spatial orientation blocks governing your running financial balance displays */
+.total-container {
+    /* Shifts text element flow tracking alignments completely over to the right margin line */
+    text-align: right;
+    /* Inflates typography sizes up slightly larger than default standard document text scales */
+    font-size: 1.2rem;
+    /* Secures a 10-pixel baseline margin spacing barrier right above your detailed grid blocks */
+    margin-bottom: 10px;
+}
+
+/* Standardizes structured spreadsheet presentation grids mapping out tracking records */
+table {
+    /* Forces the core database records presentation framework grid to extend fully across its bounds */
+    width: 100%;
+    /* Compresses duplicate border overlaps into singular clean dividing lines rather than thick walls */
+    border-collapse: collapse;
+}
+
+/* Applies matching layout behaviors concurrently across both column headings and database rows */
+th, td {
+    /* Uniformly frames text spacing pads with 12-pixel internal tracking separators for grid legibility */
+    padding: 12px;
+    /* Draws a faint dividing line separator strictly beneath each distinct structural data entry row */
+    border-bottom: 1px solid #ddd;
+    /* Keeps all interior alignment layouts oriented uniformly back to standard left reading lines */
+    text-align: left;
+}
+
+/* Singles out column headers specifically to apply individual theme highlights */
+th { 
+    /* Paints an ultra-light clean silver backdrop accent across the header cell title block spaces */
+    background-color: #f8f9fa; 
+}
+
+/* Stylizes specific entry destruction actions attached to individual row records */
+.delete-btn {
+    /* Coats the specific removal trigger backgrounds with an alert notification crimson red paint */
+    background-color: #dc3545;
+    /* Keeps row action typography labels highly legible by painting text elements stark white */
+    color: white;
+    /* Strips standard desktop system operating framework accent outlines off button perimeters */
+    border: none;
+    /* Formats specialized tracking boundaries inside action cells via snug pixel spacing pads */
+    padding: 5px 10px;
+    /* Curves tracking action perimeter block corners into matching micro-rounded frame formats */
+    border-radius: 4px;
+    /* Modifies local arrow points into standard finger clicking click pointer indicators on hover */
+    cursor: pointer;
+}
+
+/* Updates row item removal trigger designs dynamically under cursor alignment states */
+.delete-btn:hover { 
+    /* Swaps out standard red shades for deeper burgundy warning hues under operational mouseovers */
+    background-color: #c82333; 
+}
+
+/* Add to the bottom of style.css */
+/* Stylizes the overarching master database clean wipe command trigger action */
+.reset-btn {
+    /* Applies a safe, neutral metallic grey background theme to convey caution and utility */
+    background-color: #6c757d; /* Metallic grey default */
+    /* Sets the readable reset button button font typography characters to solid bright white */
+    color: white;
+    /* Removes native operating engine outline styling frames for clean uniform UI layout integration */
+    border: none;
+    /* Adjusts the active terminal interaction arrow into standard hand selection trigger vectors */
+    cursor: pointer;
+}
+
+/* Controls responsive user feedback color shifts during master wipe target selections */
+.reset-btn:hover {
+    /* Transforms the calm slate grey into a vibrant alert crimson shade to indicate a destructive act */
+    background-color: #dc3545; /* Turns bright red on hover as a warning */
+}
